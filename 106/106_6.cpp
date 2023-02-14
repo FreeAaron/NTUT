@@ -67,14 +67,22 @@ public:
     delete pImaginary;
   }
 
-private:
-  void setImaginary (int n)
+    void setImaginary (int n)
   {
     for (int i = 0; i < n; i++)
       pImaginary[i] = i * 2 + 1;
   }
   int real;
   int *pImaginary;
+
+// private:
+//   void setImaginary (int n)
+//   {
+//     for (int i = 0; i < n; i++)
+//       pImaginary[i] = i * 2 + 1;
+//   }
+//   int real;
+//   int *pImaginary;
 };
 
 int

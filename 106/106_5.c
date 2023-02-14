@@ -73,6 +73,7 @@ test04 ()
   strcpy (str1, "abc");
   strcpy (str2, "abc");
   strcat (str1, strcat (str2, "ghi"));
+   printf ("%d\n",strcmp (str1, str2));
   return strcmp (str1, str2);
 }
 
