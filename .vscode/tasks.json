@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe 建置使用中檔案",
-            "command": "C:\\mingw64\\bin\\g++.exe",
+            "command": "C:/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -12,7 +12,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "C:/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"
@@ -21,8 +21,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "偵錯工具產生的工作。"
+            "detail": "編譯器: C:/mingw64/bin/g++.exe"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }

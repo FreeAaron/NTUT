@@ -32,7 +32,7 @@ test07 ()
       ans += 1;
     default:
       ans = 0;
-      printf ("%d\n", ans + 7);
+      printf ("%d\n", ans );
     }
 
   return ans > 0 ? ans : 0;
@@ -98,7 +98,7 @@ test02 (void)
   { CLUBS, DIAMONDS, HEARTS, SPADES } s;
   int i = DIAMONDS;
   s = HEARTS;
-  s++;  
+  //s++;
   i = i + s + SPADES;
   return i;
 }
