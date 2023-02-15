@@ -1,88 +1,82 @@
-/******************************************************************************
-
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <iostream>
-
 using namespace std;
 
-class Number
-{
-public:
-  Number (int x, int y):real (x)
-  {
-    pImaginary = new int (y);
-  }
-  Number (Number & cn)
-  {
-    int n = (*cn.pImaginary) + 1;
-    real = cn.real + 1;
-    pImaginary = new int (n);
-  }
-  int getNumber ()
-  {
-    return real + (*pImaginary);
-  }
-  void addImaginary (int n)
-  {
-    pImaginary += n;
-  }
-  void newImaginary (int n)
-  {
-    delete pImaginary;
-    pImaginary = new int[n];
-    setImaginary (n);
-  }
-  int getReal ()
-  {
-    return real;
-  }
-  int getImaginary (int i)
-  {
-    return pImaginary[i];
-  }
-  void compute ()
-  {
-    pImaginary = &real;
-  }
-  void compute (Number * cn)
-  {
-    cn = new Number (3, 4);
-  }
-  void compute (Number & cn)
-  {
-    cn = Number (5, 6);
-  }
-  Number compute (Number cn, int n)
-  {
-    cn.real += n;
-    return cn;
-  }
-  void deletemaginary ()
-  {
-    delete pImaginary;
-  }
+// 建立 Number 類別
+class Number{
+    public:
+        // 建構子，初始設定 real 和 pImaginary 的值
+        Number(int x,int y):real(x){
+            pImaginary=new int(y);
+        }
 
-    void setImaginary (int n)
-  {
-    for (int i = 0; i < n; i++)
-      pImaginary[i] = i * 2 + 1;
-  }
-  int real;
-  int *pImaginary;
+        // 複製建構子，用來複製物件時使用
+        Number(Number &cn){
+            int n=(*cn.pImaginary)+1;
+            real =cn.real+1;
+            pImaginary =new int(n);
+        }
 
-// private:
-//   void setImaginary (int n)
-//   {
-//     for (int i = 0; i < n; i++)
-//       pImaginary[i] = i * 2 + 1;
-//   }
-//   int real;
-//   int *pImaginary;
+        // 取得數字，加總 real 和 pImaginary 的值
+        int getNumber(){
+            return real+(*pImaginary);
+        }
+
+        // 增加 pImaginary 的值
+        void addImaginary(int n){
+            pImaginary += n;
+        }
+
+        // 設定 pImaginary 的新值，並刪除原先的空間
+        void newImaginary(int n){
+            delete pImaginary;
+            pImaginary=new int[n];
+            setImaginary(n);
+        }
+
+        // 取得 real 的值
+        int getReal(){
+            return real;
+        }
+
+        // 取得 pImaginary 中指定位置的值
+        int getImaginary(int i){
+            return pImaginary[i];
+        }
+
+        // 計算 pImaginary 的值，使它等於 real
+        void compute(){
+            pImaginary=&real;
+        }
+
+        // 計算新的 Number 物件，此方法為第一種
+        void compute(Number *cn){
+            cn=new Number(3,4);
+        }
+
+        // 計算新的 Number 物件，此方法為第二種
+        void compute(Number &cn){
+            cn=Number(5,6);
+        }
+
+        // 計算新的 Number 物件，此方法為第三種
+        Number compute(Number cn , int n){
+            cn.real+=n;
+            return cn;
+        }
+
+        // 刪除 pImaginary 的空間
+        void deleteImaginary(){
+            delete pImaginary;
+        }
+
+    private:
+        // 設定 pImaginary 的值，為一串由小到大的奇數數列
+        void setImaginary(int n){
+            for(int i=0;i<n;i++)
+                pImaginary[i]=i*2+1;
+        }
+        int real;
+        int *pImaginary;
 };
 
 int

@@ -95,8 +95,7 @@ test03 (int n)
 int
 test02 (void)
 {
-  enum
-  { CLUBS, DIAMONDS, HEARTS, SPADES } s;
+  enum{ CLUBS, DIAMONDS, HEARTS, SPADES } s;
   int i = DIAMONDS;
   s = HEARTS;
   //s++;
