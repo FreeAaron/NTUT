@@ -73,6 +73,6 @@ int main(int argc,char *argv[]){
 	//printf("%d\n",f4(18,24));
 	printf("%d\n",f5(5));
 	//printf("%3.1f\n",f6(3.5));
-	//printf("%d\n",f7("language"));
+	printf("%d\n",f7("language"));
 	return 0;
 }

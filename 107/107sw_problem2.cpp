@@ -21,8 +21,8 @@ int test03(void){
 int test04(void){                                
 	struct {char str1[10], str2[10];} s;          
 	strcpy(s.str1, "yahoo");                        
-	strcpy(s.str2, "google");                       
-	strcat(s.str1, strcat(s.str2, "adobe"));              
+	strcpy(s.str2, "google");                               
+	strcat(s.str1, strcat(s.str2, "adobe"));  
 	return strcmp(s.str1, s.str2);   
 }                                               
 int test05(void){                               

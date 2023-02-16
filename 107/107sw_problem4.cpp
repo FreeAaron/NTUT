@@ -2,7 +2,8 @@
 using namespace std;                   
 class Compute {                        
 public:                                
-    virtual bool lessThan()=0;    //problem 4-1              
+    virtual bool lessThan()=0;    //problem 4-1          
+    //virtual void func() {} // Empty virtual function    
     virtual void print()=0;                
 };              
 
