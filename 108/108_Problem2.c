@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 typedef struct linkdata{
-	struct linkdata *link;
+	struct linkdata *link;  //2-1
 	char name[10];
 	int data[4][4];
 }LinkData;
@@ -14,9 +14,9 @@ void f1(int d[][4]){
 	/*Matrix multiplication*/
 	for(r=0;r<3;r++){
 		for(c=0;c<3;c++){
-			d[c][r]=0;
+			d[c][r]=0;  //2-2
 			for(k=0;k<3;k++){
-				d[c][r]+=a[c][k]*b[k][r];
+				d[c][r]+=a[c][k]*b[k][r];  //2-3
 			}
 		}
 	}
@@ -24,12 +24,12 @@ void f1(int d[][4]){
 }
 void f2(LinkData **topp,char *s){
 	LinkData *x;
-	x=(LinkData *)topp;//¤£½T©w 
+	x=(LinkData *)topp;//ï¿½ï¿½ï¿½Tï¿½w   //2-4
 	strncpy(x->name,s,10);//copy s to x.name
 	for(int i=0;i<4;i++)
 		for(int j=0;j<4;j++)
 			x->data[i][j]=i+j;
-	x->link=(*topp);
+	x->link=(*topp);  //2-5
 	(*topp)=x;
 }
 

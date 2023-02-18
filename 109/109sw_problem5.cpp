@@ -14,7 +14,7 @@ class Base{
 		virtual void name(){
 			cout<< "BaseName" <<endl ;
 		}
-		virtual int transferToDecimal(){}
+		virtual int transferToDecimal(){}   //5-1
 		void app(){
 			cout<< "APP"<<endl;
 		}
@@ -67,7 +67,7 @@ class Hexadecimal:public Base{
 			int decimal=0,p=0;
 			for(int i=value.size()-1;i>=0;i--){
 				if(value[i]>='A' && value[i]<='E'){
-					decimal+=(value[i]-'A'+10)*pow(base,p);
+					decimal+=(value[i]-'A'+10)*pow(base,p);   //5-2
 				}
 				else{
 					decimal+=(value[i]-'0')*pow(base,p);

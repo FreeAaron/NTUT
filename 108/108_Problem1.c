@@ -7,12 +7,12 @@ void f1(int a,int b){
 	printf("%d\n",~a&b);//a and b�H�줸�B�ⰵand 
 }
 void f2(){
-	animal a=cat+hippo;
-	animal b=cat;	
-	animal c=hippo;	
-	printf("%d\n",a);
-		printf("%d\n",b);
-				printf("%d\n",c);
+	//animal a=cat+hippo;
+	//animal b=cat;	
+	//animal c=hippo;	
+	//printf("%d\n",a);
+		//printf("%d\n",b);
+				//printf("%d\n",c);
 }
 void f3(int num){
 	int k;
@@ -37,6 +37,7 @@ void f5(char *s1,char *s2){
 void f6(int x[],int size){
 	int sum=0;
 	for(int i=0;i<size;i++){
+	printf("%d\n",x[i]);
 		switch((animal) x[i]+3){
 			case dog:sum+=3;
 				break;
@@ -64,15 +65,15 @@ int f8(int n){
 int main(){
 	int a[]={1,2,3,4};
 	char s[2][12]={"problem","programmer"};
-//	f1(16,8);
+	f1(16,8);
 	f2();
-//	f3(5);
-//	f4(5);
-//	f5(s[0],s[1]);
-//	f6(a,4);
-//	f7(a,a[1],&a[2]);
-//	printf("%d\n",a[0]);
-//	printf("%d\n",a[1]);
+	f3(5);
+	f4(5);
+	f5(s[0],s[1]);
+	f6(a,4);
+	f7(a,a[1],&a[2]);
+	printf("%d\n",a[0]);
+	printf("%d\n",a[1]);
 	printf("%d\n",f8(6));
 	return 0;
 }

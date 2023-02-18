@@ -13,7 +13,7 @@ typedef struct{
 
 void copy_string(char *target, char *source){
 	while (*source) {
-		*target =*source;
+		*target =*source;			//2-1
 		source++;
 		target++;
 	}
@@ -37,7 +37,7 @@ void foo(STUDENT *students){
 	for (int i=0; i<NUM_OF_STUDENT; i++){
 		for (int j=i+1; j<NUM_OF_STUDENT; j++){
 			if (students[i].score >students[j].score){
-				sawp1(*(students+i),*(students+j));
+				sawp1(*(students+i),*(students+j));			//2-2
 			}
 		}
 	}
@@ -48,24 +48,24 @@ void bar(STUDENT *students) {
 		for (int j=i+1; j<NUM_OF_STUDENT; j++)
 			if(students[i].score<students[j].score)
 				//sawp2(&students[i],&students[j]);
-				sawp2(students+i,students+j);
+				sawp2(students+i,students+j);			//2-3
 }
 
 int main(){
 	char *ids [NUM_OF_STUDENT]={"t001" , "t002", "t003", "t004", "t005" };
 	int scores [NUM_OF_STUDENT]={85, 70, 95, 60, 75 };
 	STUDENT *students;
-	students = (STUDENT *) malloc(NUM_OF_STUDENT*sizeof (STUDENT) ) ;
+	students = (STUDENT *) malloc(NUM_OF_STUDENT*sizeof (STUDENT) ) ;			//2-4
 	//initialize each student's id and score
 	for(int i=0;i<NUM_OF_STUDENT; i++){
 		copy_string(students[i].id, ids[i]);
-		(students+i)->score = scores[i] ;
+		(students+i)->score = scores[i] ;			//2-5
 	}
 	foo(students);
-	printf("%s\n",students[0].id) ;
+	printf("%s\n",students[0].id) ;			//2-6
+	
 	bar (students);
-
-	printf("%s\n",students[0].id) ;
+	printf("%s\n",students[0].id) ;			//2-7
 	return 0;
 }
 

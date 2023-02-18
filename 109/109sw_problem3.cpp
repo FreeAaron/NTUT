@@ -69,7 +69,7 @@ int main(){
 	d.f();
 	f(d);
 	g(d);
-	/*
+	
 	B *b1, *b2;
 	b1= new B;
 	b2= new D;
@@ -78,6 +78,6 @@ int main(){
 	b1->g();
 	b2->g();
 	delete b1;
-	delete b2;*/
+	delete b2;
 }
 
