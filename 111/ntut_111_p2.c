@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
     int a = 0, b = 1, c = 6;
 
     printf("problem 2-1: %d\n", f1()); // problem 2-1
-    printf("problem 2-2: %3.lf\n", f2(5)); // problem 2-2
+    printf("problem 2-2: %3.1f\n", f2(5)); // problem 2-2
     printf("problem 2-3: %d\n", f3()); // problem 2-3
     printf("problem 2-4: %d\n", f4(w)); // problem 2-4
 
